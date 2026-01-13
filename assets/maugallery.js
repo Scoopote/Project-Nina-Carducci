@@ -258,7 +258,7 @@
     },
     /*
         CORRECTION APPLIQUÉE ICI
-        - Avant : on ajoutait seulement "active-tag"
+        - Avant . on ajoutait seulement "active-tag"
         - Maintenant : on ajoute "active" + "active-tag"
         => le filtre sélectionné redevient doré (Bootstrap)
       */
