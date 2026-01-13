@@ -152,6 +152,15 @@
           index = i;
         }
       });
+      /*
+        CORRECTION APPLIQUÉE ICI
+        - Les boutons "précédent" et "suivant" de la modale ne permettaient pas
+          de naviguer correctement entre les images.
+        - Maintenant : - On calcule l’index de l’image courante.
+- Pour PREV : on recule d’une image (si on est au début, on va à la dernière).
+- Pour NEXT : on avance d’une image (si on est à la fin, on revient à la première).
+      */
+
       // on recule d’une image
       let prevIndex = index - 1;
 

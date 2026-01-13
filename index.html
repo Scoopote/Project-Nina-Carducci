@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- ACCESSIBILITÉ :
+	<!-- ACCESSIBILITÉ + SEO :
 	- Ajout d'un titre -->
 	<title>Nina Carducci – Photographe professionnelle à Paris</title>
 	<!-- SEO : Ajout d'une meta description -->
@@ -73,6 +73,7 @@
 		<section id="header" aria-label="Carrousel de photos">
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
+
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
 						class="active" aria-current="true" aria-label="Aller à la diapositive 1"></button>
@@ -85,16 +86,16 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<!-- ACCESSIBILITÉ : alt descriptif (au lieu de "...") -->
-						<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100"
+						<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" class="d-block w-100"
 							alt="Photographie artistique en extérieur, lumière naturelle">
 					</div>
 					<div class="carousel-item">
-						<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100"
+						<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" class="d-block w-100"
 							alt="Photographie de scène de concert, éclairage urbain">
 					</div>
 					<div class="carousel-item">
-						<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100"
-							alt="Photographie portrait, ambiance chaleureuse">
+						<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
+							class="d-block w-100" alt="Photographie portrait, ambiance chaleureuse">
 					</div>
 				</div>
 
@@ -152,6 +153,11 @@
 				<!-- ACCESSIBILITÉ : Les images doivent avoir des alt.-->
 
 				<div class="gallery" style="display: none">
+					<!-- PERFORMANCE :
+					- Redimensionnement des images selon leur usage (galerie ≈ 400px, carrousel ≈ 1600px) afin d’éviter de charger des images trop lourdes.
+					- Conversion de toutes les images au format WebP pour réduire fortement leur poids.
+					- Objectif : améliorer le temps de chargement et le score Lighthouse Performance.
+					-->
 					<img data-gallery-tag="Concert" class="gallery-item"
 						src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
 						alt="Photographie de concert, musicien sur scène">
