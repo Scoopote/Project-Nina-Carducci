@@ -260,7 +260,7 @@
         CORRECTION APPLIQUÉE ICI
         - Avant . on ajoutait seulement "active-tag"
         - Maintenant : on ajoute "active" + "active-tag"
-        => le filtre sélectionné redevient doré (Bootstrap)
+        => le filtre sélectionné redevient doré 
       */
     filterByTag() {
       if ($(this).hasClass("active-tag")) {

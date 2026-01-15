@@ -26,7 +26,6 @@
 
 
 	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.js"></script>
@@ -157,7 +156,6 @@
 					<!-- PERFORMANCE :
 					- Redimensionnement des images selon leur usage (galerie ≈ 400px, carrousel ≈ 1600px) afin d’éviter de charger des images trop lourdes.
 					- Conversion de toutes les images au format WebP pour réduire fortement leur poids.
-					- Objectif : améliorer le temps de chargement et le score Lighthouse Performance.
 					-->
 					<img data-gallery-tag="Concert" class="gallery-item"
 						src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
@@ -197,7 +195,6 @@
 				</div>
 			</div>
 
-			<!-- Citation 1 -->
 			<div class="quote">
 				<figure>
 					<blockquote>
@@ -213,7 +210,6 @@
 			</div>
 		</section>
 
-		<!-- Section Services -->
 		<section id="services" aria-labelledby="services-title">
 			<h2 class="title" id="services-title">Mes services</h2>
 
@@ -258,7 +254,6 @@
 			</div>
 		</section>
 
-		<!-- Citation 2 (hors section) -->
 		<section aria-label="Citation">
 			<div class="quote">
 				<figure>
@@ -275,11 +270,45 @@
 		</section>
 
 		<!-- Section Contact -->
-		<section id="contact" aria-labelledby="contact-title">
+		<!--
+		RÉFÉRENCEMENT LOCAL (Schema.org - microdata) :
+		- Ajout de microdonnées Schema.org de type Photographer.
+		- Permet aux moteurs de recherche d’identifier clairement l’activité,
+		  le nom, l’adresse, le téléphone, les horaires et les réseaux sociaux.
+		- Objectif : améliorer le référencement local et l’affichage dans les résultats enrichis Google.
+		-->
+
+		<section id="contact" aria-labelledby="contact-title" itemscope itemtype="https://schema.org/Photographer">
+
+			<meta itemprop="name" content="Nina Carducci">
+			<meta itemprop="url" content="https://saadbenallal4.github.io/Projet-Nina-Carducci/">
+			<meta itemprop="sameAs" content="https://www.instagram.com/ninacarducci.photo/?hl=fr">
+
 			<div class="container">
+
 				<div class="form-container">
-					<h2 id="contact-title">Une question ? Une demande de devis ?</h2>
+					<h2 id="contact-title" itemprop="description">
+						Une question ? Une demande de devis ?
+					</h2>
+
 					<p>N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures</p>
+
+					<!-- Coordonnées pour le référencement local -->
+					<p>
+						<span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+							<span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>,
+							<span itemprop="postalCode">33200</span>
+							<span itemprop="addressLocality">Bordeaux</span>
+						</span>
+					</p>
+
+					<p>
+						<span itemprop="telephone">05 56 67 78 89</span>
+					</p>
+
+					<p itemprop="openingHours">
+						Horaires : du lundi au vendredi de 10h à 19h
+					</p>
 
 					<!--
 					ACCESSIBILITÉ :
@@ -302,8 +331,9 @@
 
 				<div class="picture right">
 					<!-- ACCESSIBILITÉ : alt descriptif -->
-					<img src="./assets/images/camera.webp" alt="Appareil photo professionnel">
+					<img src="./assets/images/camera.webp" alt="Appareil photo professionnel" itemprop="image">
 				</div>
+
 			</div>
 		</section>
 
