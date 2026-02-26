@@ -88,7 +88,7 @@ body {
 }
 
 .picture img {
-  width: 100%;
+  width: 70%;
 }
 
 #about-me {
@@ -126,17 +126,20 @@ body {
 
 /* Filtres de la galerie (tags-bar) */
 .tags-bar .nav-link {
-  color: #333;
-  cursor: pointer;              /* petite main sur les filtres */
+  color: #333333;
+  cursor: pointer;
 }
+
 
 /* Filtre actif de la galerie */
 .tags-bar .nav-link.active,
 .tags-bar .nav-link.active-tag {
-  color: #fff;
-  background-color: #7c7130;    /* plus foncé pour le contraste */
+  color: #ffffff;
+  background-color: #4a3b0f; /* un doré très foncé mais lisible */
   border-radius: 0;
 }
+
+
 
 /* (on laisse .nav-pills générique tel quel si utilisé ailleurs) */
 

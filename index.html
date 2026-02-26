@@ -7,6 +7,61 @@
   <title>Nina Carducci - Photographe à Bordeaux</title>
   <meta name="description" content="Nina Carducci, photographe professionnelle à Bordeaux : mariages, portraits, concerts et photos d'entreprise.">
 
+  <!-- Open Graph (Facebook, LinkedIn...) -->
+  <meta property="og:title" content="Nina Carducci - Photographe à Bordeaux">
+  <meta property="og:description" content="Nina Carducci, photographe professionnelle à Bordeaux, capture vos plus beaux moments grâce à ses services de shooting photo, de retouche et d'album photos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scoopote.github.io/Project-Nina-Carducci/">
+  <meta property="og:image" content="https://scoopote.github.io/Project-Nina-Carducci/assets/images/nina.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nina Carducci - Photographe à Bordeaux">
+  <meta name="twitter:description" content="Nina Carducci, photographe professionnelle à Bordeaux, capture vos plus beaux moments grâce à ses services de shooting photo, de retouche et d'album photos.">
+  <meta name="twitter:image" content="https://scoopote.github.io/Project-Nina-Carducci/assets/images/nina.webp">
+
+  <!-- Données structurées LocalBusiness / photographe -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nina Carducci",
+    "image": "https://scoopote.github.io/Project-Nina-Carducci/assets/images/nina.webp",
+    "url": "https://scoopote.github.io/Project-Nina-Carducci/",
+    "telephone": "+33 5 56 67 78 89",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "68 avenue Alsace-Lorraine",
+      "addressLocality": "Bordeaux",
+      "postalCode": "33200",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.8378,
+      "longitude": -0.5792
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "€€",
+    "sameAs": [
+      "https://www.instagram.com/ninacarducci.photo/?hl=fr"
+    ]
+  }
+  </script>
+
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,8 +78,7 @@
   <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-          crossorigin="anonymous"
-          defer></script>
+          crossorigin="anonymous"></script>
   <script src="./assets/maugallery.js" defer></script>
   <script src="./assets/scripts.js" defer></script>
 </head>
@@ -102,8 +156,6 @@
       <div class="picture left">
         <img src="./assets/images/nina.webp"
              alt="Portrait de Nina Carducci, photographe"
-             width="400"
-             height="400"
              loading="lazy">
       </div>
       <div id="about-me">
@@ -290,12 +342,13 @@
         </div>
       </div>
     </section>
+
     <!-- Lightbox de la galerie -->
-<div id="myAwesomeLightbox" class="mg-lightbox" style="display: none;">
-  <button class="mg-prev" aria-label="Image précédente">‹</button>
-  <img class="mg-img" src="" alt="">
-  <button class="mg-next" aria-label="Image suivante">›</button>
-</div>
+    <div id="myAwesomeLightbox" class="mg-lightbox" style="display: none;">
+      <button class="mg-prev" aria-label="Image précédente">‹</button>
+      <img class="mg-img" src="" alt="">
+      <button class="mg-next" aria-label="Image suivante">›</button>
+    </div>
   </main>
 </body>
 </html>
