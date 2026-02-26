@@ -47,6 +47,19 @@ body {
   width: 20px;
 }
 
+/* SLIDER : garder les proportions sans étirer */
+
+#header .carousel-item {
+  max-height: 700px;      /* ajuste la hauteur si besoin */
+  overflow: hidden;
+}
+
+#header .carousel-item img {
+  width: 100%;
+  height: auto;           /* ne pas forcer la hauteur */
+  object-fit: cover;      /* recadre proprement si ça dépasse */
+}
+
 /* A PROPOS */
 
 #about {
@@ -102,10 +115,6 @@ body {
 
 /* GALERIE */
 
-#gallery {
-  /* min-height: 100vh; */
-}
-
 .title {
   text-align: center;
   padding-block: 2em;
@@ -114,6 +123,22 @@ body {
 .gallery .nav {
   justify-content: center;
 }
+
+/* Filtres de la galerie (tags-bar) */
+.tags-bar .nav-link {
+  color: #333;
+  cursor: pointer;              /* petite main sur les filtres */
+}
+
+/* Filtre actif de la galerie */
+.tags-bar .nav-link.active,
+.tags-bar .nav-link.active-tag {
+  color: #fff;
+  background-color: #7c7130;    /* plus foncé pour le contraste */
+  border-radius: 0;
+}
+
+/* (on laisse .nav-pills générique tel quel si utilisé ailleurs) */
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -138,14 +163,16 @@ body {
   padding-bottom: 100%;
 }
 
-/* Images de la galerie uniformisées */
+/* Images de la galerie uniformisées et cliquables */
 .gallery-item {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   padding: .5em;
+  cursor: pointer; /* main sur les photos de la galerie */
 }
+
 
 .mg-prev,
 .mg-next {
